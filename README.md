@@ -1,3 +1,6 @@
+# Note: code written in master branch plz check in master branch
+
+
 # Basic
 Basic Spring Project with MVC, Security, and Spring Data Support This project demonstrates a basic Spring application using Spring MVC, Spring Security with JWT, and Spring Data JPA. The application manages Student and Subject entities and supports a REST API layer for CRUD operations. The project also includes in-memory database support with H2 to simplify setup and testing.
 
