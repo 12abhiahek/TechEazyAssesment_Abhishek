@@ -10,14 +10,7 @@ import java.util.Optional;
 
 @Service
 public class SubjectService {
-/**
-    @Autowired
-    private SubjectRepository subjectRepository;
 
-    public List<Subject> getAllSubjects() {
-        return subjectRepository.findAll();
-    }
-   */
 
 @Autowired
 private SubjectRepository subjectRepository;

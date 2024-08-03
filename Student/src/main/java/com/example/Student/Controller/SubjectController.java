@@ -18,43 +18,13 @@ import java.util.Set;
 @RestController
 @RequestMapping("/subjects")
 public class SubjectController {
-  /**  @Autowired
-    private SubjectService subjectService;
 
-    @GetMapping
-    public List<Subject> getAllSubjects() {
-        return subjectService.getAllSubjects();
-    }
-*/
 
   @Autowired
   private StudentService studentService;
 
     @Autowired
     private SubjectService subjectService;
-
-    @PostMapping("/addStudentWithSubjects")
-    public ResponseEntity<Student> createStudentWithSubjects(@RequestBody StudentSubjectDto dto) {
-        Student student = new Student();
-        student.setName(dto.getName());
-        student.setAddress(dto.getAddress());
-
-        Set<Subject> subjects = new HashSet<>();
-        for (SubjectDTO subjectDTO : dto.getSubjects()) {
-            Subject subject = subjectService.findByName(subjectDTO.getName());
-            if (subject == null) {
-                subject = new Subject();
-                subject.setName(subjectDTO.getName());
-                subjectService.saveSubject(subject);
-            }
-            subjects.add(subject);
-        }
-        student.setSubjects(subjects);
-
-        Student savedStudent = studentService.createStudent(student);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedStudent);
-    }
-
 
     @GetMapping
     public ResponseEntity<List<Subject>> getAllSubjects() {

@@ -18,20 +18,6 @@ import java.util.Set;
 @RestController
 @RequestMapping("/students")
 public class StudentController {
-/**
-    @Autowired
-    private StudentService studentService;
-
-    @PostMapping
-    public Student createStudent(@RequestBody Student student) {
-        return studentService.createStudent(student);
-    }
-
-    @GetMapping
-    public List<Student> getAllStudents() {
-        return studentService.getAllStudents();
-    }
-*/
 
 @Autowired
 private StudentService studentService;
